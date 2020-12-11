@@ -1,14 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="content-wrapper">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Funcionario:</strong>
-  <%= @remuneracao.funcionario_id %>
-</p>
+  <p>
+    <strong>Funcionario:</strong>
+    <%= @remuneracao.funcionario_id %>
+  </p>
 
-<p>
-  <strong>Salario:</strong>
-  <%= @remuneracao.salario %>
-</p>
+  <p>
+    <strong>Salario:</strong>
+    <%= @remuneracao.salario %>
+  </p>
 
-<%= link_to 'Edit', edit_remuneracao_path(@remuneracao) %> |
-<%= link_to 'Back', remuneracoes_path %>
+  <%= link_to 'Edit', edit_remuneracao_path(@remuneracao) %> |
+  <%= link_to 'Back', remuneracoes_path %>
+</div>

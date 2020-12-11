@@ -1,19 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="content-wrapper">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Funcionario:</strong>
-  <%= @turno.funcionario_id %>
-</p>
+  <p>
+    <strong>Funcionario:</strong>
+    <%= @turno.funcionario_id %>
+  </p>
 
-<p>
-  <strong>Entrada:</strong>
-  <%= @turno.entrada %>
-</p>
+  <p>
+    <strong>Entrada:</strong>
+    <%= @turno.entrada %>
+  </p>
 
-<p>
-  <strong>Saida:</strong>
-  <%= @turno.saida %>
-</p>
+  <p>
+    <strong>Saida:</strong>
+    <%= @turno.saida %>
+  </p>
 
-<%= link_to 'Edit', edit_turno_path(@turno) %> |
-<%= link_to 'Back', turnos_path %>
+  <%= link_to 'Edit', edit_turno_path(@turno) %> |
+  <%= link_to 'Back', turnos_path %>
+</div>

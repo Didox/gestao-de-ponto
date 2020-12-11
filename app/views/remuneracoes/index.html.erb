@@ -1,18 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="content-wrapper">
+  <p id="notice"><%= notice %></p>
 
-<h1>Remuneracoes</h1>
+  <h1>Remuneracoes</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Funcionario</th>
-      <th>Salario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <table>
+    <thead>
+      <tr>
+        <th>Funcionario</th>
+        <th>Salario</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @remuneracoes.each do |remuneracao| %>
+    <tbody>
+      <% @remuneracoes.each do |remuneracao| %>
       <tr>
         <td><%= remuneracao.funcionario_id %></td>
         <td><%= remuneracao.salario %></td>
@@ -20,10 +21,11 @@
         <td><%= link_to 'Edit', edit_remuneracao_path(remuneracao) %></td>
         <td><%= link_to 'Destroy', remuneracao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to 'New Remuneracao', new_remuneracao_path %>
+  <%= link_to 'New Remuneracao', new_remuneracao_path %>
+</div>
