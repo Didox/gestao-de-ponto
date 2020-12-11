@@ -5,6 +5,9 @@ class TurnosController < ApplicationController
   # GET /turnos.json
   def index
     @turnos = Turno.all
+    if params[:funcionario_id].present?
+      @turnos = @turnos.where(funcionario_id: params[:funcionario_id])
+    end
   end
 
   # GET /turnos/1

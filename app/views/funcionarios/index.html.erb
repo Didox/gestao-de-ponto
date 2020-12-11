@@ -9,7 +9,7 @@
         <th>Nome</th>
         <th>Dias trabalhados</th>
         <th>Valor a receber</th>
-        <th>histórico</th>
+        <th>Histórico do turno</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -20,6 +20,7 @@
         <td><%= funcionario.nome %></td>
         <td><%= funcionario.dias_trabalhados %></td>
         <td>R$ <%= funcionario.valor_receber.round(2) %></td>
+        <td><%= link_to 'Turnos', "#{turnos_path}?funcionario_id=#{funcionario.id}", class: "btn btn-primary" %></td>
         <td><%= link_to 'Mostrar', funcionario, class: "btn btn-primary" %></td>
         <td><%= link_to 'Editar', edit_funcionario_path(funcionario), class: "btn btn-warning" %></td>
         <td><%= link_to 'Apagar', funcionario, method: :delete, data: { confirm: 'Você tem certeza ??' }, class: "btn btn-danger" %></td>
