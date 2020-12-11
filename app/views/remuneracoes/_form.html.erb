@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :funcionario_id %>
-    <%= form.text_field :funcionario_id %>
+    <%= form.select(:funcionario_id, Funcionario.all.collect {|f| [f.nome, f.id]}) %>
   </div>
 
   <div class="field">
     <%= form.label :salario %>
-    <%= form.text_field :salario %>
+    <%= form.number_field :salario %>
   </div>
 
   <div class="actions">

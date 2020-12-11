@@ -19,7 +19,7 @@ class TurnosTest < ApplicationSystemTestCase
     fill_in "Saida", with: @turno.saida
     click_on "Create Turno"
 
-    assert_text "Turno was successfully created"
+    assert_text "Turno foi criado com sucesso"
     click_on "Back"
   end
 
@@ -32,7 +32,7 @@ class TurnosTest < ApplicationSystemTestCase
     fill_in "Saida", with: @turno.saida
     click_on "Update Turno"
 
-    assert_text "Turno was successfully updated"
+    assert_text "Turno foi atualizado com sucesso"
     click_on "Back"
   end
 
@@ -42,6 +42,6 @@ class TurnosTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Turno was successfully destroyed"
+    assert_text "Turno foi apagado com sucesso"
   end
 end

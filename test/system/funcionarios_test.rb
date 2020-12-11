@@ -17,7 +17,7 @@ class FuncionariosTest < ApplicationSystemTestCase
     fill_in "Nome", with: @funcionario.nome
     click_on "Create Funcionario"
 
-    assert_text "Funcionario was successfully created"
+    assert_text "Funcionario foi criado com sucesso"
     click_on "Back"
   end
 
@@ -28,7 +28,7 @@ class FuncionariosTest < ApplicationSystemTestCase
     fill_in "Nome", with: @funcionario.nome
     click_on "Update Funcionario"
 
-    assert_text "Funcionario was successfully updated"
+    assert_text "Funcionario foi atualizado com sucesso"
     click_on "Back"
   end
 
@@ -38,6 +38,6 @@ class FuncionariosTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Funcionario was successfully destroyed"
+    assert_text "Funcionario foi apagado com sucesso"
   end
 end

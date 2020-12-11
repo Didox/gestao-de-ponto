@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= form.label :funcionario_id %>
-    <%= form.text_field :funcionario_id %>
+    <%= form.select(:funcionario_id, Funcionario.all.collect {|f| [f.nome, f.id]}) %>
   </div>
 
   <div class="field">
     <%= form.label :entrada %>
-    <%= form.datetime_select :entrada %>
+    <%= form.datetime_field :entrada %>
   </div>
 
   <div class="field">
     <%= form.label :saida %>
-    <%= form.datetime_select :saida %>
+    <%= form.datetime_field :saida %>
   </div>
 
   <div class="actions">

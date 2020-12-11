@@ -18,7 +18,7 @@ class RemuneracoesTest < ApplicationSystemTestCase
     fill_in "Salario", with: @remuneracao.salario
     click_on "Create Remuneracao"
 
-    assert_text "Remuneracao was successfully created"
+    assert_text "Remuneracao foi criado com sucesso"
     click_on "Back"
   end
 
@@ -30,7 +30,7 @@ class RemuneracoesTest < ApplicationSystemTestCase
     fill_in "Salario", with: @remuneracao.salario
     click_on "Update Remuneracao"
 
-    assert_text "Remuneracao was successfully updated"
+    assert_text "Remuneracao foi atualizado com sucesso"
     click_on "Back"
   end
 
@@ -40,6 +40,6 @@ class RemuneracoesTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Remuneracao was successfully destroyed"
+    assert_text "Remuneracao foi apagado com sucesso"
   end
 end
