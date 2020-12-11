@@ -16,9 +16,9 @@
     <tbody>
       <% @turnos.each do |turno| %>
       <tr>
-        <td><%= turno.funcionario_id %></td>
-        <td><%= turno.entrada %></td>
-        <td><%= turno.saida %></td>
+        <td><%= turno.funcionario.nome %></td>
+        <td><%= turno.entrada.strftime("%d/%m/%Y %H:%M") %></td>
+        <td><%= turno.saida.strftime("%d/%m/%Y %H:%M") %></td>
         <td><%= link_to 'Mostrar', turno %></td>
         <td><%= link_to 'Editar', edit_turno_path(turno) %></td>
         <td><%= link_to 'Apagar', turno, method: :delete, data: { confirm: 'Você tem certeza ??' } %></td>

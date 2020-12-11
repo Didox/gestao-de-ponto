@@ -7,6 +7,7 @@
     <thead>
       <tr>
         <th>Nome</th>
+        <th>Valor a receber</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -15,6 +16,7 @@
       <% @funcionarios.each do |funcionario| %>
       <tr>
         <td><%= funcionario.nome %></td>
+        <td>R$ ????</td>
         <td><%= link_to 'Mostrar', funcionario, class: "btn btn-primary" %></td>
         <td><%= link_to 'Editar', edit_funcionario_path(funcionario), class: "btn btn-warning" %></td>
         <td><%= link_to 'Apagar', funcionario, method: :delete, data: { confirm: 'Você tem certeza ??' }, class: "btn btn-danger" %></td>

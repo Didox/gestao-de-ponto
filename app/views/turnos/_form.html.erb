@@ -1,7 +1,7 @@
 <%= form_with(model: turno, local: true) do |form| %>
   <% if turno.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(turno.errors.count, "error") %> prohibited this turno from being saved:</h2>
+      <h2>Confira os erros abaixo:</h2>
 
       <ul>
         <% turno.errors.full_messages.each do |message| %>

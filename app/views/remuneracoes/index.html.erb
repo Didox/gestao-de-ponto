@@ -15,7 +15,7 @@
     <tbody>
       <% @remuneracoes.each do |remuneracao| %>
       <tr>
-        <td><%= remuneracao.funcionario_id %></td>
+        <td><%= remuneracao.funcionario.nome %></td>
         <td><%= remuneracao.salario %></td>
         <td><%= link_to 'Mostrar', remuneracao %></td>
         <td><%= link_to 'Editar', edit_remuneracao_path(remuneracao) %></td>

@@ -8,12 +8,12 @@
 
   <p>
     <strong>Entrada:</strong>
-    <%= @turno.entrada %>
+    <%= @turno.entrada.strftime("%d/%m/%Y %H:%M") %>
   </p>
 
   <p>
     <strong>Saida:</strong>
-    <%= @turno.saida %>
+    <%= @turno.saida.strftime("%d/%m/%Y %H:%M") %>
   </p>
 
   <%= link_to 'Editar', edit_turno_path(@turno) %> |
