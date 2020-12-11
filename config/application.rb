@@ -12,6 +12,7 @@ module GestaoDePonto
     config.load_defaults 6.0
     config.i18n.default_locale = :"pt-BR"
     config.time_zone = 'Brasilia'
+    config.add_autoload_paths_to_load_path = false
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
