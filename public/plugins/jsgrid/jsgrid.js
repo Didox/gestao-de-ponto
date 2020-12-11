@@ -66,7 +66,7 @@
         this.data = [];
         this.fields = [];
 
-        this._editingRow = null;
+        this._EditandoRow = null;
         this._sortField = null;
         this._sortOrder = SORT_ORDER_ASC;
         this._firstDisplayingPage = 1;
@@ -84,7 +84,7 @@
         rowRenderer: null,
 
         rowClick: function(args) {
-            if(this.editing) {
+            if(this.Editando) {
                 this.editItem($(args.event.target).closest("tr"));
             }
         },
@@ -106,12 +106,12 @@
         insertRowRenderer: null,
         insertRowClass: "jsgrid-insert-row",
 
-        editing: false,
+        Editando: false,
         editRowRenderer: null,
         editRowClass: "jsgrid-edit-row",
 
         confirmDeleting: true,
-        deleteConfirm: "Are you sure?",
+        deleteConfirm: "Você tem certeza ??",
 
         selecting: true,
         selectedRowClass: "jsgrid-selected-row",
@@ -172,7 +172,7 @@
         onItemDeleted: $.noop,
         onItemInserting: $.noop,
         onItemInserted: $.noop,
-        onItemEditing: $.noop,
+        onItemEditando: $.noop,
         onItemUpdating: $.noop,
         onItemUpdated: $.noop,
         onItemInvalid: $.noop,
@@ -332,7 +332,7 @@
                     this.render();
                     break;
                 case "data":
-                case "editing":
+                case "Editando":
                 case "heading":
                 case "filtering":
                 case "inserting":
@@ -1163,7 +1163,7 @@
             this._eachField(function(field) {
                 if(!field.validate ||
                    ($row === this._insertRow && !field.inserting) ||
-                   ($row === this._getEditRow() && !field.editing))
+                   ($row === this._getEditRow() && !field.Editando))
                     return;
 
                 var fieldValue = this._getItemFieldValue(item, field);
@@ -1226,12 +1226,12 @@
         },
 
         _editRow: function($row) {
-            if(!this.editing)
+            if(!this.Editando)
                 return;
 
             var item = $row.data(JSGRID_ROW_DATA_KEY);
 
-            var args = this._callEventHandler(this.onItemEditing, {
+            var args = this._callEventHandler(this.onItemEditando, {
                 row: $row,
                 item: item,
                 itemIndex: this._itemIndex(item)
@@ -1240,13 +1240,13 @@
             if(args.cancel)
                 return;
 
-            if(this._editingRow) {
+            if(this._EditandoRow) {
                 this.cancelEdit();
             }
 
             var $editRow = this._createEditRow(item);
 
-            this._editingRow = $row;
+            this._EditandoRow = $row;
             $row.hide();
             $editRow.insertBefore($row);
             $row.data(JSGRID_EDIT_ROW_DATA_KEY, $editRow);
@@ -1275,7 +1275,7 @@
                 editedItem = item;
             }
 
-            var $row = item ? this.rowByItem(item) : this._editingRow;
+            var $row = item ? this.rowByItem(item) : this._EditandoRow;
             editedItem = editedItem || this._getValidatedEditedItem();
 
             if(!editedItem)
@@ -1336,7 +1336,7 @@
         _getEditedItem: function() {
             var result = {};
             this._eachField(function(field) {
-                if(field.editing) {
+                if(field.Editando) {
                     this._setItemFieldValue(result, field, field.editValue());
                 }
             });
@@ -1344,16 +1344,16 @@
         },
 
         cancelEdit: function() {
-            if(!this._editingRow)
+            if(!this._EditandoRow)
                 return;
 
             this._getEditRow().remove();
-            this._editingRow.show();
-            this._editingRow = null;
+            this._EditandoRow.show();
+            this._EditandoRow = null;
         },
 
         _getEditRow: function() {
-            return this._editingRow && this._editingRow.data(JSGRID_EDIT_ROW_DATA_KEY);
+            return this._EditandoRow && this._EditandoRow.data(JSGRID_EDIT_ROW_DATA_KEY);
         },
 
         deleteItem: function(item) {
@@ -1868,7 +1868,7 @@
         visible: true,
         filtering: true,
         inserting: true,
-        editing: true,
+        Editando: true,
         sorting: true,
         sorter: "string", // name of SortStrategy or function to compare elements
 
@@ -1964,7 +1964,7 @@
         },
 
         editTemplate: function(value) {
-            if(!this.editing)
+            if(!this.Editando)
                 return this.itemTemplate.apply(this, arguments);
 
             var $result = this.editControl = this._createTextBox();
@@ -2054,7 +2054,7 @@
         },
 
         editTemplate: function(value) {
-            if(!this.editing)
+            if(!this.Editando)
                 return this.itemTemplate.apply(this, arguments);
 
             var $result = this.editControl = this._createTextArea();
@@ -2142,7 +2142,7 @@
         },
 
         editTemplate: function(value) {
-            if(!this.editing)
+            if(!this.Editando)
                 return this.itemTemplate.apply(this, arguments);
 
             var $result = this.editControl = this._createSelect();
@@ -2260,7 +2260,7 @@
         },
 
         editTemplate: function(value) {
-            if(!this.editing)
+            if(!this.Editando)
                 return this.itemTemplate.apply(this, arguments);
 
             var $result = this.editControl = this._createCheckbox();
@@ -2306,7 +2306,7 @@
         width: 50,
         filtering: false,
         inserting: false,
-        editing: false,
+        Editando: false,
         sorting: false,
 
         buttonClass: "jsgrid-button",

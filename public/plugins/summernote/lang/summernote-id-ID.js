@@ -159,7 +159,7 @@ return /******/ (function(modules) { // webpackBootstrap
         link: 'Tautan',
         insert: 'Tambah tautan',
         unlink: 'Hapus tautan',
-        edit: 'Edit',
+        edit: 'Editar',
         textToDisplay: 'Tampilan teks',
         url: 'Tautan tujuan',
         openInNewWindow: 'Buka di jendela baru'

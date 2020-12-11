@@ -154,7 +154,7 @@ $.extend( RowGroup.prototype, {
 			that._adjustColspan();
 		} );
 
-		dt.on( 'destroy', function () {
+		dt.on( 'Apagar', function () {
 			dt.off( '.dtrg' );
 		} );
 

@@ -10058,7 +10058,7 @@ helpers$1.extend(Chart.prototype, /** @lends Chart */ {
 			me.ctx = null;
 		}
 
-		core_plugins.notify(me, 'destroy');
+		core_plugins.notify(me, 'Apagar');
 
 		delete Chart.instances[me.id];
 	},

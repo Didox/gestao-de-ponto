@@ -282,7 +282,7 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.exten
       link: 'Link',
       insert: 'Insert Link',
       unlink: 'Unlink',
-      edit: 'Edit',
+      edit: 'Editar',
       textToDisplay: 'Text to display',
       url: 'To what URL should this link go?',
       openInNewWindow: 'Open in new window',
@@ -2258,7 +2258,7 @@ function () {
         _this2.removeMemo(key);
       }); // trigger custom onDestroy callback
 
-      this.triggerEvent('destroy', this);
+      this.triggerEvent('Apagar', this);
     }
   }, {
     key: "code",
@@ -2290,7 +2290,7 @@ function () {
       this.layoutInfo.editable.attr('contenteditable', true);
       this.invoke('toolbar.activate', true);
       this.triggerEvent('disable', false);
-      this.options.editing = true;
+      this.options.Editando = true;
     }
   }, {
     key: "disable",
@@ -2301,7 +2301,7 @@ function () {
       }
 
       this.layoutInfo.editable.attr('contenteditable', false);
-      this.options.editing = false;
+      this.options.Editando = false;
       this.invoke('toolbar.deactivate', true);
       this.triggerEvent('disable', true);
     }
@@ -3569,7 +3569,7 @@ function createImage(url) {
     }).appendTo(document.body).attr('src', url);
   }).promise();
 }
-// CONCATENATED MODULE: ./src/js/base/editing/History.js
+// CONCATENATED MODULE: ./src/js/base/Editando/History.js
 function History_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function History_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -3728,7 +3728,7 @@ function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/editing/Style.js
+// CONCATENATED MODULE: ./src/js/base/Editando/Style.js
 function Style_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Style_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -3917,7 +3917,7 @@ function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/editing/Bullet.js
+// CONCATENATED MODULE: ./src/js/base/Editando/Bullet.js
 function Bullet_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Bullet_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4240,7 +4240,7 @@ function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/editing/Typing.js
+// CONCATENATED MODULE: ./src/js/base/Editando/Typing.js
 function Typing_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Typing_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4252,7 +4252,7 @@ function Typing_createClass(Constructor, protoProps, staticProps) { if (protoPro
 
 
 /**
- * @class editing.Typing
+ * @class Editando.Typing
  *
  * Typing
  *
@@ -4376,7 +4376,7 @@ function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/base/editing/Table.js
+// CONCATENATED MODULE: ./src/js/base/Editando/Table.js
 function Table_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Table_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4712,7 +4712,7 @@ TableResultAction.resultAction = {
 };
 /**
  *
- * @class editing.Table
+ * @class Editando.Table
  *
  * Table
  *
@@ -6765,7 +6765,7 @@ function () {
 
     this.context = context;
     this.$document = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(document);
-    this.$editingArea = context.layoutInfo.editingArea;
+    this.$EditandoArea = context.layoutInfo.EditandoArea;
     this.options = context.options;
     this.lang = this.options.langInfo;
     this.events = {
@@ -6791,7 +6791,7 @@ function () {
     value: function initialize() {
       var _this2 = this;
 
-      this.$handle = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(['<div class="note-handle">', '<div class="note-control-selection">', '<div class="note-control-selection-bg"></div>', '<div class="note-control-holder note-control-nw"></div>', '<div class="note-control-holder note-control-ne"></div>', '<div class="note-control-holder note-control-sw"></div>', '<div class="', this.options.disableResizeImage ? 'note-control-holder' : 'note-control-sizing', ' note-control-se"></div>', this.options.disableResizeImage ? '' : '<div class="note-control-selection-info"></div>', '</div>', '</div>'].join('')).prependTo(this.$editingArea);
+      this.$handle = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()(['<div class="note-handle">', '<div class="note-control-selection">', '<div class="note-control-selection-bg"></div>', '<div class="note-control-holder note-control-nw"></div>', '<div class="note-control-holder note-control-ne"></div>', '<div class="note-control-holder note-control-sw"></div>', '<div class="', this.options.disableResizeImage ? 'note-control-holder' : 'note-control-sizing', ' note-control-se"></div>', this.options.disableResizeImage ? '' : '<div class="note-control-selection-info"></div>', '</div>', '</div>'].join('')).prependTo(this.$EditandoArea);
       this.$handle.on('mousedown', function (event) {
         if (dom.isControlSizing(event.target)) {
           event.preventDefault();
@@ -7152,7 +7152,7 @@ function () {
     Placeholder_classCallCheck(this, Placeholder);
 
     this.context = context;
-    this.$editingArea = context.layoutInfo.editingArea;
+    this.$EditandoArea = context.layoutInfo.EditandoArea;
     this.options = context.options;
 
     if (this.options.inheritPlaceholder === true) {
@@ -7183,7 +7183,7 @@ function () {
       this.$placeholder = external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default()('<div class="note-placeholder">');
       this.$placeholder.on('click', function () {
         _this2.context.invoke('focus');
-      }).html(this.options.placeholder).prependTo(this.$editingArea);
+      }).html(this.options.placeholder).prependTo(this.$EditandoArea);
       this.update();
     }
   }, {
@@ -8839,7 +8839,7 @@ function () {
       this.context.invoke('buttons.build', $content, this.options.popover.table); // [workaround] Disable Firefox's default table editor
 
       if (env.isFF) {
-        document.execCommand('enableInlineTableEditing', false, false);
+        document.execCommand('enableInlineTableEditando', false, false);
       }
 
       this.$popover.on('mousedown', function (e) {
@@ -9223,7 +9223,7 @@ function () {
     this.pageY = null;
     this.events = {
       'summernote.contextmenu': function summernoteContextmenu(e) {
-        if (_this.options.editing) {
+        if (_this.options.Editando) {
           e.preventDefault();
           e.stopPropagation();
           _this.onContextmenu = true;
@@ -9236,7 +9236,7 @@ function () {
         _this.pageY = e.pageY;
       },
       'summernote.keyup summernote.mouseup summernote.scroll': function summernoteKeyupSummernoteMouseupSummernoteScroll(we, e) {
-        if (_this.options.editing && !_this.onContextmenu) {
+        if (_this.options.Editando && !_this.onContextmenu) {
           _this.pageX = e.pageX;
           _this.pageY = e.pageY;
 
@@ -9673,7 +9673,7 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summe
   lists: lists,
   options: {
     langInfo: external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summernote.lang['en-US'],
-    editing: true,
+    Editando: true,
     modules: {
       'editor': Editor_Editor,
       'clipboard': Clipboard_Clipboard,
@@ -9940,7 +9940,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 var editor = renderer["a" /* default */].create('<div class="note-editor note-frame panel panel-default"/>');
 var toolbar = renderer["a" /* default */].create('<div class="note-toolbar panel-heading" role="toolbar"></div></div>');
-var editingArea = renderer["a" /* default */].create('<div class="note-editing-area"/>');
+var EditandoArea = renderer["a" /* default */].create('<div class="note-Editando-area"/>');
 var codable = renderer["a" /* default */].create('<textarea class="note-codable" aria-multiline="true"/>');
 var editable = renderer["a" /* default */].create('<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"/>');
 var statusbar = renderer["a" /* default */].create(['<output class="note-status-output" role="status" aria-live="polite"/>', '<div class="note-statusbar" role="status">', '<div class="note-resizebar" aria-label="Resize">', '<div class="note-icon-bar"/>', '<div class="note-icon-bar"/>', '<div class="note-icon-bar"/>', '</div>', '</div>'].join(''));
@@ -10006,7 +10006,7 @@ var ui_ui = function ui(editorOptions) {
   return {
     editor: editor,
     toolbar: toolbar,
-    editingArea: editingArea,
+    EditandoArea: EditandoArea,
     codable: codable,
     editable: editable,
     statusbar: statusbar,
@@ -10081,19 +10081,19 @@ var ui_ui = function ui(editorOptions) {
       $dialog.one('hidden.bs.modal', handler);
     },
     showDialog: function showDialog($dialog) {
-      $dialog.modal('show');
+      $dialog.modal('Mostrar');
     },
     hideDialog: function hideDialog($dialog) {
       $dialog.modal('hide');
     },
     createLayout: function createLayout($note) {
-      var $editor = (editorOptions.airMode ? airEditor([editingArea([codable(), airEditable()])]) : editorOptions.toolbarPosition === 'bottom' ? editor([editingArea([codable(), editable()]), toolbar(), statusbar()]) : editor([toolbar(), editingArea([codable(), editable()]), statusbar()])).render();
+      var $editor = (editorOptions.airMode ? airEditor([EditandoArea([codable(), airEditable()])]) : editorOptions.toolbarPosition === 'bottom' ? editor([EditandoArea([codable(), editable()]), toolbar(), statusbar()]) : editor([toolbar(), EditandoArea([codable(), editable()]), statusbar()])).render();
       $editor.insertAfter($note);
       return {
         note: $note,
         editor: $editor,
         toolbar: $editor.find('.note-toolbar'),
-        editingArea: $editor.find('.note-editing-area'),
+        EditandoArea: $editor.find('.note-Editando-area'),
         editable: $editor.find('.note-editable'),
         codable: $editor.find('.note-codable'),
         statusbar: $editor.find('.note-statusbar')

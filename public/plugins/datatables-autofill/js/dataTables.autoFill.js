@@ -438,7 +438,7 @@ $.extend( AutoFill.prototype, {
 			return;
 		}
 
-		// Build the object structure for Editor's multi-row editing
+		// Build the object structure for Editor's multi-row Editando
 		var idValues = {};
 		var nodes = [];
 		var fields = editor.fields();
@@ -479,13 +479,13 @@ $.extend( AutoFill.prototype, {
 				var id = dt.row( cell.index.row ).id();
 				idValues[ fieldName ][ id ] = cell.set;
 
-				// Keep a list of cells so we can activate the bubble editing
+				// Keep a list of cells so we can activate the bubble Editando
 				// with them
 				nodes.push( cell.index );
 			}
 		}
 
-		// Perform the edit using bubble editing as it allows us to specify
+		// Perform the edit using bubble Editando as it allows us to specify
 		// the cells to be edited, rather than using full rows
 		editor
 			.bubble( nodes, false )
@@ -725,7 +725,7 @@ $.extend( AutoFill.prototype, {
 
 		var startDt = dt.cell( ':eq('+start.row+')', start.column+':visible', {page:'current'} );
 
-		// If Editor is active inside this cell (inline editing) we need to wait for Editor to
+		// If Editor is active inside this cell (inline Editando) we need to wait for Editor to
 		// submit and then we can loop back and trigger the fill.
 		if ( $('div.DTE', startDt.node()).length ) {
 			var editor = dt.editor();

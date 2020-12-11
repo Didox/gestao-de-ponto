@@ -294,7 +294,7 @@
           ui.onDialogHidden(self.$dialog, function() {
             $specialCharNode.off('click');
 
-            self.$dialog.find('button').tooltip('destroy');
+            self.$dialog.find('button').tooltip('Apagar');
 
             $(document).off('keydown', keyDownEventHandler);
 

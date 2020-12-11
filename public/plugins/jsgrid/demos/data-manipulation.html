@@ -118,11 +118,11 @@
             $("#jsGrid").jsGrid({
                 height: "70%",
                 width: "100%",
-                editing: true,
+                Editando: true,
                 autoload: true,
                 paging: true,
                 deleteConfirm: function(item) {
-                    return "The client \"" + item.Name + "\" will be removed. Are you sure?";
+                    return "The client \"" + item.Name + "\" will be removed. Você tem certeza ??";
                 },
                 rowClick: function(args) {
                     showDetailsDialog("Edit", args.item);

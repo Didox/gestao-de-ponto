@@ -447,7 +447,7 @@
         return this.$element;
       }
     }, {
-      key: 'destroy',
+      key: 'Apagar',
       value: function destroy() {
         var $form = this.$element.closest('form');
         if ($form.length) {

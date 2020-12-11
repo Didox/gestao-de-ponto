@@ -1576,7 +1576,7 @@
       _proto.toggleSubmenu = function toggleSubmenu() {
         this._element.siblings().show().toggleClass("show");
 
-        if (!this._element.next().hasClass('show')) {
+        if (!this._element.next().hasClass('Mostrar')) {
           this._element.parents('.dropdown-menu').first().find('.show').removeClass("show").hide();
         }
 
@@ -1799,7 +1799,7 @@
         $(this._getContainerId()).prepend(toast);
         var createdEvent = $.Event(Event.CREATED);
         $('body').trigger(createdEvent);
-        toast.toast('show');
+        toast.toast('Mostrar');
 
         if (this._config.autoremove) {
           toast.on('hidden.bs.toast', function () {

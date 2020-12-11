@@ -2550,7 +2550,7 @@ var Popper = function () {
       return update.call(this);
     }
   }, {
-    key: 'destroy',
+    key: 'Apagar',
     value: function destroy$$1() {
       return destroy.call(this);
     }

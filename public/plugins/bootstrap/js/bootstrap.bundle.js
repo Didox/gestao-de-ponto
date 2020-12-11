@@ -277,7 +277,7 @@
   var ClassName = {
     ALERT: 'alert',
     FADE: 'fade',
-    SHOW: 'show'
+    SHOW: 'Mostrar'
   };
   /**
    * ------------------------------------------------------------------------
@@ -1245,7 +1245,7 @@
     CLICK_DATA_API: "click" + EVENT_KEY$3 + DATA_API_KEY$3
   };
   var ClassName$3 = {
-    SHOW: 'show',
+    SHOW: 'Mostrar',
     COLLAPSE: 'collapse',
     COLLAPSING: 'collapsing',
     COLLAPSED: 'collapsed'
@@ -4122,7 +4122,7 @@
         return update.call(this);
       }
     }, {
-      key: 'destroy',
+      key: 'Apagar',
       value: function destroy$$1() {
         return destroy.call(this);
       }
@@ -4227,7 +4227,7 @@
   };
   var ClassName$4 = {
     DISABLED: 'disabled',
-    SHOW: 'show',
+    SHOW: 'Mostrar',
     DROPUP: 'dropup',
     DROPRIGHT: 'dropright',
     DROPLEFT: 'dropleft',
@@ -4768,7 +4768,7 @@
     BACKDROP: 'modal-backdrop',
     OPEN: 'modal-open',
     FADE: 'fade',
-    SHOW: 'show',
+    SHOW: 'Mostrar',
     STATIC: 'modal-static'
   };
   var Selector$5 = {
@@ -5503,7 +5503,7 @@
     popperConfig: null
   };
   var HoverState = {
-    SHOW: 'show',
+    SHOW: 'Mostrar',
     OUT: 'out'
   };
   var Event$6 = {
@@ -5520,7 +5520,7 @@
   };
   var ClassName$6 = {
     FADE: 'fade',
-    SHOW: 'show'
+    SHOW: 'Mostrar'
   };
   var Selector$6 = {
     TOOLTIP: '.tooltip',
@@ -6196,7 +6196,7 @@
 
   var ClassName$7 = {
     FADE: 'fade',
-    SHOW: 'show'
+    SHOW: 'Mostrar'
   };
   var Selector$7 = {
     TITLE: '.popover-header',
@@ -6685,7 +6685,7 @@
     ACTIVE: 'active',
     DISABLED: 'disabled',
     FADE: 'fade',
-    SHOW: 'show'
+    SHOW: 'Mostrar'
   };
   var Selector$9 = {
     DROPDOWN: '.dropdown',
@@ -6879,7 +6879,7 @@
   $(document).on(Event$9.CLICK_DATA_API, Selector$9.DATA_TOGGLE, function (event) {
     event.preventDefault();
 
-    Tab._jQueryInterface.call($(this), 'show');
+    Tab._jQueryInterface.call($(this), 'Mostrar');
   });
   /**
    * ------------------------------------------------------------------------
@@ -6916,7 +6916,7 @@
   var ClassName$a = {
     FADE: 'fade',
     HIDE: 'hide',
-    SHOW: 'show',
+    SHOW: 'Mostrar',
     SHOWING: 'showing'
   };
   var DefaultType$7 = {

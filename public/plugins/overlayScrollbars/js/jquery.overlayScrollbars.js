@@ -4561,7 +4561,7 @@
                     for (var extName in _extensions)
                         _base.removeExt(extName);
 
-                    //remove all 'destroy' events
+                    //remove all 'Apagar' events
                     while (_destroyEvents[LEXICON.l] > 0)
                         _destroyEvents.pop()();
 

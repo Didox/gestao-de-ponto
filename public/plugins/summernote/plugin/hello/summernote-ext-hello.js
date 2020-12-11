@@ -71,7 +71,7 @@
         this.$panel.appendTo('body');
       };
 
-      // This methods will be called when editor is destroyed by $('..').summernote('destroy');
+      // This methods will be called when editor is destroyed by $('..').summernote('Apagar');
       // You should remove elements on `initialize`.
       this.destroy = function() {
         this.$panel.remove();

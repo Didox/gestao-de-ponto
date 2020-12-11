@@ -8286,7 +8286,7 @@
 		var namespace = '.dt.DT_details';
 		var drawEvent = 'draw'+namespace;
 		var colvisEvent = 'column-visibility'+namespace;
-		var destroyEvent = 'destroy'+namespace;
+		var destroyEvent = 'Apagar'+namespace;
 		var data = settings.aoData;
 	
 		api.off( drawEvent +' '+ colvisEvent +' '+ destroyEvent );
@@ -10179,7 +10179,7 @@
 		 *
 		 * @example
 		 *   // Get the data from localStorage (could interface with a form for
-		 *   // adding, editing and removing rows).
+		 *   // adding, Editando and removing rows).
 		 *   $('#example').dataTable( {
 		 *     "ajax": function (data, callback, settings) {
 		 *       callback(

@@ -855,7 +855,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				value: 5,
 				range: false,
 				selection: 'before',
-				tooltip: 'show',
+				tooltip: 'Mostrar',
 				tooltip_split: false,
 				lock_to_ticks: false,
 				handle: 'round',

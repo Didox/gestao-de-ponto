@@ -6038,7 +6038,7 @@ S2.define('jquery.select2',[
 ], function ($, _, Select2, Defaults, Utils) {
   if ($.fn.select2 == null) {
     // All methods that should return the element
-    var thisMethods = ['open', 'close', 'destroy'];
+    var thisMethods = ['open', 'close', 'Apagar'];
 
     $.fn.select2 = function (options) {
       options = options || {};

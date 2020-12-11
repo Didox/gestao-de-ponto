@@ -3002,7 +3002,7 @@ var Colorpicker = function () {
      */
 
   }, {
-    key: 'destroy',
+    key: 'Apagar',
     value: function destroy() {
       var color = this.color;
 
@@ -3032,7 +3032,7 @@ var Colorpicker = function () {
      */
 
   }, {
-    key: 'show',
+    key: 'Mostrar',
     value: function show(e) {
       this.popupHandler.show(e);
     }
@@ -4212,7 +4212,7 @@ var PopupHandler = function () {
      */
 
   }, {
-    key: 'show',
+    key: 'Mostrar',
     value: function show(e) {
       if (this.isVisible() || this.showing || this.hidding) {
         return;
@@ -4224,7 +4224,7 @@ var PopupHandler = function () {
 
       var cp = this.colorpicker;
 
-      cp.lastEvent.alias = 'show';
+      cp.lastEvent.alias = 'Mostrar';
       cp.lastEvent.e = e;
 
       // Prevent showing browser native HTML5 colorpicker
@@ -4242,7 +4242,7 @@ var PopupHandler = function () {
       cp.picker.addClass('colorpicker-visible').removeClass('colorpicker-hidden');
 
       if (this.popoverTarget) {
-        this.popoverTarget.popover('show');
+        this.popoverTarget.popover('Mostrar');
       } else {
         this.fireShow();
       }

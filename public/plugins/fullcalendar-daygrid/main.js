@@ -119,7 +119,7 @@ Docs & License: https://fullcalendar.io/
                 this.el.style.display = '';
                 this.position();
                 this.isHidden = false;
-                this.trigger('show');
+                this.trigger('Mostrar');
             }
         };
         // Hides the popover, through CSS, but does not remove it from the DOM

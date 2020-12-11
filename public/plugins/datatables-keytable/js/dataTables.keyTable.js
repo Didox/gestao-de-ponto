@@ -259,7 +259,7 @@ $.extend( KeyTable.prototype, {
 				that._editor( key, orig, false );
 			} );
 
-			// Active editing on double click - it will already have focus from
+			// Active Editando on double click - it will already have focus from
 			// the click event handler above
 			$( dt.table().body() ).on( 'dblclick'+namespace, 'th, td', function (e) {
 				if ( that.s.enable === false ) {
@@ -328,7 +328,7 @@ $.extend( KeyTable.prototype, {
 			this._clipboard();
 		}
 
-		dt.on( 'destroy'+namespace, function () {
+		dt.on( 'Apagar'+namespace, function () {
 			that._blur( true );
 
 			// Event tidy up
@@ -445,7 +445,7 @@ $.extend( KeyTable.prototype, {
 				}
 
 				if ( editor ) {
-					// Got Editor - need to activate inline editing,
+					// Got Editor - need to activate inline Editando,
 					// set the value and submit
 					editor
 						.inline( focused.cell.index() )
@@ -1124,7 +1124,7 @@ KeyTable.defaults = {
 	editor: null,
 
 	/**
-	 * Trigger editing immediately on focus
+	 * Trigger Editando immediately on focus
 	 * @type {boolean}
 	 */
 	editOnFocus: false,

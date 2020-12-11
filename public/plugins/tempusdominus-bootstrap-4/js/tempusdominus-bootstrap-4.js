@@ -61,7 +61,7 @@ var DateTimePicker = function ($, moment) {
         UPDATE: 'update' + EVENT_KEY,
         ERROR: 'error' + EVENT_KEY,
         HIDE: 'hide' + EVENT_KEY,
-        SHOW: 'show' + EVENT_KEY
+        SHOW: 'Mostrar' + EVENT_KEY
     },
         DatePickerModes = [{
         CLASS_NAME: 'days',
@@ -1813,13 +1813,13 @@ var TempusDominusBootstrap4 = function ($) {
                 content.append(toolbar);
             }
             if (this._hasDate()) {
-                content.append($('<li>').addClass(this._options.collapse && this._hasTime() ? 'collapse' : '').addClass(this._options.collapse && this._hasTime() && this._options.viewMode === 'times' ? '' : 'show').append(dateView));
+                content.append($('<li>').addClass(this._options.collapse && this._hasTime() ? 'collapse' : '').addClass(this._options.collapse && this._hasTime() && this._options.viewMode === 'times' ? '' : 'Mostrar').append(dateView));
             }
             if (this._options.toolbarPlacement === 'default') {
                 content.append(toolbar);
             }
             if (this._hasTime()) {
-                content.append($('<li>').addClass(this._options.collapse && this._hasDate() ? 'collapse' : '').addClass(this._options.collapse && this._hasDate() && this._options.viewMode === 'times' ? 'show' : '').append(timeView));
+                content.append($('<li>').addClass(this._options.collapse && this._hasDate() ? 'collapse' : '').addClass(this._options.collapse && this._hasDate() && this._options.viewMode === 'times' ? 'Mostrar' : '').append(timeView));
             }
             if (this._options.toolbarPlacement === 'bottom') {
                 content.append(toolbar);
@@ -2375,11 +2375,11 @@ var TempusDominusBootstrap4 = function ($) {
                             if (expanded.collapse) {
                                 // if collapse plugin is available through bootstrap.js then use it
                                 expanded.collapse('hide');
-                                closed.collapse('show');
+                                closed.collapse('Mostrar');
                             } else {
                                 // otherwise just toggle in class on the two views
-                                expanded.removeClass('show');
-                                closed.addClass('show');
+                                expanded.removeClass('Mostrar');
+                                closed.addClass('Mostrar');
                             }
                             $span.toggleClass(this._options.icons.time + ' ' + this._options.icons.date);
 
@@ -2763,7 +2763,7 @@ var TempusDominusBootstrap4 = function ($) {
         if (!config._options.allowInputToggle) {
             return;
         }
-        TempusDominusBootstrap4._jQueryInterface.call($target, 'show', event);
+        TempusDominusBootstrap4._jQueryInterface.call($target, 'Mostrar', event);
     });
 
     $.fn[DateTimePicker.NAME] = TempusDominusBootstrap4._jQueryInterface;

@@ -1,9 +1,9 @@
-<div class="content-wrapper">
+<div class="content-wrapper container">
   <p id="notice"><%= notice %></p>
 
   <h1>Remuneracoes</h1>
 
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <th>Funcionario</th>
@@ -17,9 +17,9 @@
       <tr>
         <td><%= remuneracao.funcionario_id %></td>
         <td><%= remuneracao.salario %></td>
-        <td><%= link_to 'Show', remuneracao %></td>
-        <td><%= link_to 'Edit', edit_remuneracao_path(remuneracao) %></td>
-        <td><%= link_to 'Destroy', remuneracao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', remuneracao %></td>
+        <td><%= link_to 'Editar', edit_remuneracao_path(remuneracao) %></td>
+        <td><%= link_to 'Apagar', remuneracao, method: :delete, data: { confirm: 'Você tem certeza ??' } %></td>
       </tr>
       <% end %>
     </tbody>
@@ -27,5 +27,5 @@
 
   <br>
 
-  <%= link_to 'New Remuneracao', new_remuneracao_path %>
+  <%= link_to 'Novo', new_remuneracao_path, class: "btn btn-primary" %>
 </div>

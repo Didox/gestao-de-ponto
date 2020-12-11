@@ -398,7 +398,7 @@ $.extend( Buttons.prototype, {
 			this.add( buttons[i] );
 		}
 
-		dt.on( 'destroy', function ( e, settings ) {
+		dt.on( 'Apagar', function ( e, settings ) {
 			if ( settings === dtSettings ) {
 				that.destroy();
 			}
